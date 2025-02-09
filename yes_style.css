@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #172446; 
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden; 
+}
+
+.container {
+    text-align: center;
+    background-color: #3a3a3a; 
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid #00b5fc; 
+    box-shadow: 0 8px 20px rgba(0, 205, 246, 0.756); 
+    max-width: 600px; 
+    width: 90%; 
+}
+
+.header_text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #f7f7f7; 
+    margin: 20px 0;
+}
