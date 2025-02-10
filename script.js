@@ -3,25 +3,30 @@ function nextPages() {
 }
 
 function moveButton() {
-    const button = document.getElementById("noButton");
+    const noButton = document.getElementById("noButton");
+    const yesButton = document.getElementById("yesButton");
 
     // Tambahkan efek getar
-    button.classList.add("wiggle");
+    noButton.classList.add("wiggle");
     setTimeout(() => {
-        button.classList.remove("wiggle");
+        noButton.classList.remove("wiggle");
     }, 500);
 
     // Dapatkan ukuran layar dan batas pergerakan tombol
-    const maxX = window.innerWidth - button.offsetWidth;
-    const maxY = window.innerHeight - button.offsetHeight;
+    const maxX = window.innerWidth - noButton.offsetWidth;
+    const maxY = window.innerHeight - noButton.offsetHeight;
 
     // Pastikan tombol tetap berada dalam layar
     const randomX = Math.max(0, Math.random() * maxX);
     const randomY = Math.max(0, Math.random() * maxY);
 
-    button.style.position = "absolute";
-    button.style.left = `${randomX}px`;
-    button.style.top = `${randomY}px`;
+    noButton.style.position = "absolute";
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
+
+    // Membesarkan tombol "Yes"
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1.2}px`; // Membesar 20% setiap klik
 }
 
 // Pastikan tombol juga bisa bergerak di perangkat sentuh
